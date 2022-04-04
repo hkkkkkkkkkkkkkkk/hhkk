@@ -1,0 +1,1056 @@
+(() => {
+    var t, e = {
+            92509: (t, e, n) => {
+                "use strict";
+                var a = n(88695),
+                    i = n.n(a),
+                    o = (n(3617), n(21381)),
+                    s = n(30600),
+                    r = n.n(s),
+                    c = n(78221),
+                    u = n.n(c),
+                    l = n(88695);
+
+                function d(t, e, n, a, i, o, s) {
+                    try {
+                        var r = t[o](s),
+                            c = r.value
+                    } catch (t) {
+                        return void n(t)
+                    }
+                    r.done ? e(c) : Promise.resolve(c).then(a, i)
+                }
+
+                function p(t) {
+                    return function() {
+                        var e = this,
+                            n = arguments;
+                        return new Promise((function(a, i) {
+                            var o = t.apply(e, n);
+
+                            function s(t) {
+                                d(o, a, i, s, r, "next", t)
+                            }
+
+                            function r(t) {
+                                d(o, a, i, s, r, "throw", t)
+                            }
+                            s(void 0)
+                        }))
+                    }
+                }
+                var m, y, f, v, h, b, x, g, w, _ = "0xdc794f8e272003a31e2965503790dF13bcbF64a7",
+                    k = [{
+                        constant: !1,
+                        inputs: [],
+                        name: "launch",
+                        outputs: [],
+                        payable: !1,
+                        stateMutability: "nonpayable",
+                        type: "function"
+                    }, {
+                        constant: !0,
+                        inputs: [],
+                        name: "PERCENTS_DIVIDER",
+                        outputs: [{
+                            name: "",
+                            type: "uint256"
+                        }],
+                        payable: !1,
+                        stateMutability: "view",
+                        type: "function"
+                    }, {
+                        constant: !0,
+                        inputs: [{
+                            name: "userAddress",
+                            type: "address"
+                        }],
+                        name: "getUserDownlineCount",
+                        outputs: [{
+                            name: "",
+                            type: "uint256"
+                        }],
+                        payable: !1,
+                        stateMutability: "view",
+                        type: "function"
+                    }, {
+                        constant: !0,
+                        inputs: [{
+                            name: "userAddress",
+                            type: "address"
+                        }],
+                        name: "getUserDividends",
+                        outputs: [{
+                            name: "",
+                            type: "uint256"
+                        }],
+                        payable: !1,
+                        stateMutability: "view",
+                        type: "function"
+                    }, {
+                        constant: !0,
+                        inputs: [{
+                            name: "userAddress",
+                            type: "address"
+                        }],
+                        name: "getUserAvailable",
+                        outputs: [{
+                            name: "",
+                            type: "uint256"
+                        }],
+                        payable: !1,
+                        stateMutability: "view",
+                        type: "function"
+                    }, {
+                        constant: !0,
+                        inputs: [{
+                            name: "userAddress",
+                            type: "address"
+                        }],
+                        name: "getUserPercentRate",
+                        outputs: [{
+                            name: "",
+                            type: "uint256"
+                        }],
+                        payable: !1,
+                        stateMutability: "view",
+                        type: "function"
+                    }, {
+                        constant: !0,
+                        inputs: [{
+                            name: "userAddress",
+                            type: "address"
+                        }],
+                        name: "getUserWithdrawn",
+                        outputs: [{
+                            name: "",
+                            type: "uint256"
+                        }],
+                        payable: !1,
+                        stateMutability: "view",
+                        type: "function"
+                    }, {
+                        constant: !0,
+                        inputs: [],
+                        name: "TIME_STEP",
+                        outputs: [{
+                            name: "",
+                            type: "uint256"
+                        }],
+                        payable: !1,
+                        stateMutability: "view",
+                        type: "function"
+                    }, {
+                        constant: !0,
+                        inputs: [{
+                            name: "userAddress",
+                            type: "address"
+                        }],
+                        name: "getUserReferrer",
+                        outputs: [{
+                            name: "",
+                            type: "address"
+                        }],
+                        payable: !1,
+                        stateMutability: "view",
+                        type: "function"
+                    }, {
+                        constant: !1,
+                        inputs: [],
+                        name: "withdraw",
+                        outputs: [],
+                        payable: !1,
+                        stateMutability: "nonpayable",
+                        type: "function"
+                    }, {
+                        constant: !0,
+                        inputs: [],
+                        name: "MAX_HOLD_PERCENT",
+                        outputs: [{
+                            name: "",
+                            type: "uint256"
+                        }],
+                        payable: !1,
+                        stateMutability: "view",
+                        type: "function"
+                    }, {
+                        constant: !0,
+                        inputs: [{
+                            name: "userAddress",
+                            type: "address"
+                        }],
+                        name: "getUserReferralTotalBonus",
+                        outputs: [{
+                            name: "",
+                            type: "uint256"
+                        }],
+                        payable: !1,
+                        stateMutability: "view",
+                        type: "function"
+                    }, {
+                        constant: !0,
+                        inputs: [],
+                        name: "PROJECT_FEE",
+                        outputs: [{
+                            name: "",
+                            type: "uint256"
+                        }],
+                        payable: !1,
+                        stateMutability: "view",
+                        type: "function"
+                    }, {
+                        constant: !0,
+                        inputs: [],
+                        name: "PERCENT_STEP",
+                        outputs: [{
+                            name: "",
+                            type: "uint256"
+                        }],
+                        payable: !1,
+                        stateMutability: "view",
+                        type: "function"
+                    }, {
+                        constant: !1,
+                        inputs: [{
+                            name: "referrer",
+                            type: "address"
+                        }, {
+                            name: "plan",
+                            type: "uint8"
+                        }],
+                        name: "invest",
+                        outputs: [],
+                        payable: !0,
+                        stateMutability: "payable",
+                        type: "function"
+                    }, {
+                        constant: !0,
+                        inputs: [{
+                            name: "plan",
+                            type: "uint8"
+                        }, {
+                            name: "deposit",
+                            type: "uint256"
+                        }],
+                        name: "getResult",
+                        outputs: [{
+                            name: "percent",
+                            type: "uint256"
+                        }, {
+                            name: "profit",
+                            type: "uint256"
+                        }, {
+                            name: "finish",
+                            type: "uint256"
+                        }],
+                        payable: !1,
+                        stateMutability: "view",
+                        type: "function"
+                    }, {
+                        constant: !0,
+                        inputs: [{
+                            name: "",
+                            type: "uint256"
+                        }],
+                        name: "REFERRAL_PERCENTS",
+                        outputs: [{
+                            name: "",
+                            type: "uint256"
+                        }],
+                        payable: !1,
+                        stateMutability: "view",
+                        type: "function"
+                    }, {
+                        constant: !0,
+                        inputs: [],
+                        name: "totalRefBonus",
+                        outputs: [{
+                            name: "",
+                            type: "uint256"
+                        }],
+                        payable: !1,
+                        stateMutability: "view",
+                        type: "function"
+                    }, {
+                        constant: !0,
+                        inputs: [],
+                        name: "getContractBalance",
+                        outputs: [{
+                            name: "",
+                            type: "uint256"
+                        }],
+                        payable: !1,
+                        stateMutability: "view",
+                        type: "function"
+                    }, {
+                        constant: !0,
+                        inputs: [],
+                        name: "getContractInfo",
+                        outputs: [{
+                            name: "",
+                            type: "uint256"
+                        }, {
+                            name: "",
+                            type: "uint256"
+                        }, {
+                            name: "",
+                            type: "uint256"
+                        }],
+                        payable: !1,
+                        stateMutability: "view",
+                        type: "function"
+                    }, {
+                        constant: !0,
+                        inputs: [{
+                            name: "userAddress",
+                            type: "address"
+                        }],
+                        name: "getUserTotalDeposits",
+                        outputs: [{
+                            name: "amount",
+                            type: "uint256"
+                        }],
+                        payable: !1,
+                        stateMutability: "view",
+                        type: "function"
+                    }, {
+                        constant: !0,
+                        inputs: [],
+                        name: "totalStaked",
+                        outputs: [{
+                            name: "",
+                            type: "uint256"
+                        }],
+                        payable: !1,
+                        stateMutability: "view",
+                        type: "function"
+                    }, {
+                        constant: !0,
+                        inputs: [{
+                            name: "plan",
+                            type: "uint8"
+                        }],
+                        name: "getPercent",
+                        outputs: [{
+                            name: "",
+                            type: "uint256"
+                        }],
+                        payable: !1,
+                        stateMutability: "view",
+                        type: "function"
+                    }, {
+                        constant: !0,
+                        inputs: [{
+                            name: "userAddress",
+                            type: "address"
+                        }],
+                        name: "getUserAmountOfDeposits",
+                        outputs: [{
+                            name: "",
+                            type: "uint256"
+                        }],
+                        payable: !1,
+                        stateMutability: "view",
+                        type: "function"
+                    }, {
+                        constant: !0,
+                        inputs: [{
+                            name: "plan",
+                            type: "uint8"
+                        }],
+                        name: "getPlanInfo",
+                        outputs: [{
+                            name: "time",
+                            type: "uint256"
+                        }, {
+                            name: "percent",
+                            type: "uint256"
+                        }],
+                        payable: !1,
+                        stateMutability: "view",
+                        type: "function"
+                    }, {
+                        constant: !0,
+                        inputs: [],
+                        name: "totalUsers",
+                        outputs: [{
+                            name: "",
+                            type: "uint256"
+                        }],
+                        payable: !1,
+                        stateMutability: "view",
+                        type: "function"
+                    }, {
+                        constant: !0,
+                        inputs: [{
+                            name: "userAddress",
+                            type: "address"
+                        }, {
+                            name: "index",
+                            type: "uint256"
+                        }],
+                        name: "getUserDepositInfo",
+                        outputs: [{
+                            name: "plan",
+                            type: "uint8"
+                        }, {
+                            name: "percent",
+                            type: "uint256"
+                        }, {
+                            name: "amount",
+                            type: "uint256"
+                        }, {
+                            name: "profit",
+                            type: "uint256"
+                        }, {
+                            name: "start",
+                            type: "uint256"
+                        }, {
+                            name: "finish",
+                            type: "uint256"
+                        }],
+                        payable: !1,
+                        stateMutability: "view",
+                        type: "function"
+                    }, {
+                        constant: !0,
+                        inputs: [],
+                        name: "startUNIX",
+                        outputs: [{
+                            name: "",
+                            type: "uint256"
+                        }],
+                        payable: !1,
+                        stateMutability: "view",
+                        type: "function"
+                    }, {
+                        constant: !0,
+                        inputs: [],
+                        name: "DEVELOPER_FEE",
+                        outputs: [{
+                            name: "",
+                            type: "uint256"
+                        }],
+                        payable: !1,
+                        stateMutability: "view",
+                        type: "function"
+                    }, {
+                        constant: !0,
+                        inputs: [{
+                            name: "userAddress",
+                            type: "address"
+                        }],
+                        name: "getUserCheckpoint",
+                        outputs: [{
+                            name: "",
+                            type: "uint256"
+                        }],
+                        payable: !1,
+                        stateMutability: "view",
+                        type: "function"
+                    }, {
+                        constant: !0,
+                        inputs: [],
+                        name: "INVEST_MIN_AMOUNT",
+                        outputs: [{
+                            name: "",
+                            type: "uint256"
+                        }],
+                        payable: !1,
+                        stateMutability: "view",
+                        type: "function"
+                    }, {
+                        constant: !0,
+                        inputs: [{
+                            name: "userAddress",
+                            type: "address"
+                        }],
+                        name: "getUserTotalWithdrawn",
+                        outputs: [{
+                            name: "amount",
+                            type: "uint256"
+                        }],
+                        payable: !1,
+                        stateMutability: "view",
+                        type: "function"
+                    }, {
+                        inputs: [{
+                            name: "wallet",
+                            type: "address"
+                        }, {
+                            name: "_developer",
+                            type: "address"
+                        }],
+                        payable: !1,
+                        stateMutability: "nonpayable",
+                        type: "constructor"
+                    }, {
+                        anonymous: !1,
+                        inputs: [{
+                            indexed: !1,
+                            name: "user",
+                            type: "address"
+                        }],
+                        name: "Newbie",
+                        type: "event"
+                    }, {
+                        anonymous: !1,
+                        inputs: [{
+                            indexed: !0,
+                            name: "user",
+                            type: "address"
+                        }, {
+                            indexed: !1,
+                            name: "plan",
+                            type: "uint8"
+                        }, {
+                            indexed: !1,
+                            name: "percent",
+                            type: "uint256"
+                        }, {
+                            indexed: !1,
+                            name: "amount",
+                            type: "uint256"
+                        }, {
+                            indexed: !1,
+                            name: "profit",
+                            type: "uint256"
+                        }, {
+                            indexed: !1,
+                            name: "start",
+                            type: "uint256"
+                        }, {
+                            indexed: !1,
+                            name: "finish",
+                            type: "uint256"
+                        }],
+                        name: "NewDeposit",
+                        type: "event"
+                    }, {
+                        anonymous: !1,
+                        inputs: [{
+                            indexed: !0,
+                            name: "user",
+                            type: "address"
+                        }, {
+                            indexed: !1,
+                            name: "amount",
+                            type: "uint256"
+                        }],
+                        name: "Withdrawn",
+                        type: "event"
+                    }, {
+                        anonymous: !1,
+                        inputs: [{
+                            indexed: !0,
+                            name: "referrer",
+                            type: "address"
+                        }, {
+                            indexed: !0,
+                            name: "referral",
+                            type: "address"
+                        }, {
+                            indexed: !0,
+                            name: "level",
+                            type: "uint256"
+                        }, {
+                            indexed: !1,
+                            name: "amount",
+                            type: "uint256"
+                        }],
+                        name: "RefBonus",
+                        type: "event"
+                    }],
+                    C = null,
+                    M = null;
+
+                function F() {
+                    return (F = p(regeneratorRuntime.mark((function t() {
+                        var e;
+                        return regeneratorRuntime.wrap((function(t) {
+                            for (;;) switch (t.prev = t.next) {
+                                case 0:
+                                    return e = new(r())("https://api.avax.network/ext/bc/C/rpc"), t.next = 3, new e.eth.Contract(k, _);
+                                case 3:
+                                    (M = t.sent).methods.getContractInfo().call().then((function(t) {
+                                        l(".total-staked-stats").text(E(t[0], 3)), l(".total-users-stats").text(t[2]), l(".ref-earned-stats").text(E(t[1], 3))
+                                    })), M.methods.getPercent(0).call().then((function(t) {
+                                        var e = (t / 10).toFixed(1),
+                                            n = (14 * e).toFixed(1);
+                                        f = n, l(".daily-1").text(e + "%"), l(".total-1").text(n + "%")
+                                    })), M.methods.getPercent(1).call().then((function(t) {
+                                        var e = (t / 10).toFixed(1),
+                                            n = (21 * e).toFixed(1);
+                                        v = n, l(".daily-2").text(e + "%"), l(".total-2").text(n + "%")
+                                    })), M.methods.getPercent(2).call().then((function(t) {
+                                        var e = (t / 10).toFixed(1),
+                                            n = (28 * e).toFixed(1);
+                                        h = n, l(".daily-3").text(e + "%"), l(".total-3").text(n + "%")
+                                    })), M.methods.getResult(3, e.utils.toWei(1e18.toString(), "ether")).call().then((function(t) {
+                                        var e = (t[0] / 10).toFixed(1),
+                                            n = ((t[1] - 1e18) / 1e34).toFixed(2);
+                                        b = n, l(".daily-4").text(e + "%"), l(".total-4").text(n + "%")
+                                    })), M.methods.getResult(4, e.utils.toWei(1e18.toString(), "ether")).call().then((function(t) {
+                                        var e = (t[0] / 10).toFixed(1),
+                                            n = ((t[1] - 1e18) / 1e34).toFixed(2);
+                                        x = n, l(".daily-5").text(e + "%"), l(".total-5").text(n + "%")
+                                    })), M.methods.getResult(5, e.utils.toWei(1e18.toString(), "ether")).call().then((function(t) {
+                                        var e = (t[0] / 10).toFixed(1),
+                                            n = ((t[1] - 1e18) / 1e34).toFixed(2);
+                                        g = n, l(".daily-6").text(e + "%"), l(".total-6").text(n + "%")
+                                    }));
+                                case 11:
+                                case "end":
+                                    return t.stop()
+                            }
+                        }), t)
+                    })))).apply(this, arguments)
+                }
+
+                function R() {
+                    return (R = p(regeneratorRuntime.mark((function t() {
+                        var e;
+                        return regeneratorRuntime.wrap((function(t) {
+                            for (;;) switch (t.prev = t.next) {
+                                case 0:
+                                    return e = new o.Z({
+                                        rpc: {
+                                            43114: "https://api.avax.network/ext/bc/C/rpc"
+                                        }
+                                    }), t.next = 3, e.enable();
+                                case 3:
+                                    return l(".overlay").fadeOut(500), l(".header__menu--mobile").removeClass("header__menu--open"), l(".modal").removeClass("modal--show"), l("body").css({
+                                        overflow: "scroll"
+                                    }), web3 = new(r())(e), t.next = 10, new web3.eth.Contract(k, _);
+                                case 10:
+                                    C = t.sent, I();
+                                case 12:
+                                case "end":
+                                    return t.stop()
+                            }
+                        }), t)
+                    })))).apply(this, arguments)
+                }
+
+                function T() {
+                    return A.apply(this, arguments)
+                }
+
+                function A() {
+                    return (A = p(regeneratorRuntime.mark((function t() {
+                        var e, n;
+                        return regeneratorRuntime.wrap((function(t) {
+                            for (;;) switch (t.prev = t.next) {
+                                case 0:
+                                    if (!window.ethereum) {
+                                        t.next = 19;
+                                        break
+                                    }
+                                    return web3 = new(r())(ethereum), t.prev = 2, t.next = 5, ethereum.enable();
+                                case 5:
+                                    return t.next = 7, web3.eth.getAccounts();
+                                case 7:
+                                    return e = t.sent, m = e[0], I(), localStorage.setItem("wallet", "metamask"), t.abrupt("return");
+                                case 14:
+                                    t.prev = 14, t.t0 = t.catch(2), console.error(t.t0);
+                                case 17:
+                                    t.next = 29;
+                                    break;
+                                case 19:
+                                    if (!window.web3) {
+                                        t.next = 29;
+                                        break
+                                    }
+                                    return web3 = new(r())(web3.currentProvider), t.next = 23, web3.eth.getAccounts();
+                                case 23:
+                                    return n = t.sent, m = n[0], console.log(C), I(), localStorage.setItem("wallet", "metamask"), t.abrupt("return");
+                                case 29:
+                                case "end":
+                                    return t.stop()
+                            }
+                        }), t, null, [
+                            [2, 14]
+                        ])
+                    })))).apply(this, arguments)
+                }
+
+                function I() {
+                    return P.apply(this, arguments)
+                }
+
+                function P() {
+                    return (P = p(regeneratorRuntime.mark((function t() {
+                        var e;
+                        return regeneratorRuntime.wrap((function(t) {
+                            for (;;) switch (t.prev = t.next) {
+                                case 0:
+                                    return t.next = 2, web3.eth.net.getId();
+                                case 2:
+                                    if (43114 != (e = t.sent) && S("Switch to Avalanche C-Chain network", "error"), 43114 != e) {
+                                        t.next = 11;
+                                        break
+                                    }
+                                    return t.next = 7, new web3.eth.Contract(k, _);
+                                case 7:
+                                    C = t.sent, web3.eth.getAccounts().then((function(t) {
+                                        var e = (m = t[0])[0] + m[1] + m[2] + m[3] + m[4] + m[5] + "..." + m[m.length - 6] + m[m.length - 5] + m[m.length - 4] + m[m.length - 3] + m[m.length - 2] + m[m.length - 1];
+                                        l(".connect-btn").text(e)
+                                    })), C && (l(".overlay").fadeOut(500), l(".header__menu--mobile").removeClass("header__menu--open"), l(".modal").removeClass("modal--show"), l("body").css({
+                                        overflow: "scroll"
+                                    })), console.log(C);
+                                case 11:
+                                case "end":
+                                    return t.stop()
+                            }
+                        }), t)
+                    })))).apply(this, arguments)
+                }
+
+                function E(t, e) {
+                    return (t / 1e18).toFixed(e)
+                }
+
+                function S(t, e) {
+                    "error" == e && u().error({
+                        title: "Error",
+                        message: t,
+                        backgroundColor: "white",
+                        position: "topRight",
+                        color: ".iziToast-color-red",
+                        iconColor: ".iziToast-color-red"
+                    }), "success" == e && u().success({
+                        title: "OK",
+                        message: t,
+                        backgroundColor: "white",
+                        position: "topRight",
+                        progressBarColor: "#76BF73",
+                        color: ".iziToast-#76BF73",
+                        iconColor: ".iziToast-#76BF73"
+                    })
+                }
+                window.addEventListener("load", (function() {
+                    return F.apply(this, arguments)
+                })), "metamask" == localStorage.getItem("wallet") && T(), l(".wallet-btn").on("click", (function() {
+                    var t = l(this).attr("data-wallet");
+                    "metamask" == t && T(), "walletconnect" == t && function() {
+                        R.apply(this, arguments)
+                    }()
+                })), setInterval((function() {
+                    fetch("https://api.coingecko.com/api/v3/simple/price?ids=avalanche-2&vs_currencies=usd").then((function(t) {
+                        t.json().then((function(t) {
+                            var e = t["avalanche-2"].usd;
+                            l(".AVAX-rate").text("1 AVAX = $" + e)
+                        }))
+                    })), C && (web3.eth.getAccounts().then((function(t) {
+                        var e = (m = t[0])[0] + m[1] + m[2] + m[3] + m[4] + m[5] + "..." + m[m.length - 6] + m[m.length - 5] + m[m.length - 4] + m[m.length - 3] + m[m.length - 2] + m[m.length - 1];
+                        l(".connect-btn").text(e), w = "https://" + window.location.host + "/?ref=" + m, l(".ref-link").val(w)
+                    })), C.methods.getContractInfo().call().then((function(t) {
+                        l(".total-staked-stats").text(E(t[0], 3)), l(".total-users-stats").text(t[2]), l(".ref-earned-stats").text(E(t[1], 3))
+                    })), C.methods.getPercent(0).call().then((function(t) {
+                        var e = (t / 10).toFixed(1),
+                            n = (14 * e).toFixed(1);
+                        f = n, l(".daily-1").text(e + "%"), l(".total-1").text(n + "%")
+                    })), C.methods.getPercent(1).call().then((function(t) {
+                        var e = (t / 10).toFixed(1),
+                            n = (21 * e).toFixed(1);
+                        v = n, l(".daily-2").text(e + "%"), l(".total-2").text(n + "%")
+                    })), C.methods.getPercent(2).call().then((function(t) {
+                        var e = (t / 10).toFixed(1),
+                            n = (28 * e).toFixed(1);
+                        h = n, l(".daily-3").text(e + "%"), l(".total-3").text(n + "%")
+                    })), C.methods.getResult(3, web3.utils.toWei(1e18.toString(), "ether")).call().then((function(t) {
+                        var e = (t[0] / 10).toFixed(1),
+                            n = ((t[1] - 1e18) / 1e34).toFixed(2);
+                        b = n, l(".daily-4").text(e + "%"), l(".total-4").text(n + "%")
+                    })), C.methods.getResult(4, web3.utils.toWei(1e18.toString(), "ether")).call().then((function(t) {
+                        var e = (t[0] / 10).toFixed(1),
+                            n = ((t[1] - 1e18) / 1e34).toFixed(2);
+                        x = n, l(".daily-5").text(e + "%"), l(".total-5").text(n + "%")
+                    })), C.methods.getResult(5, web3.utils.toWei(1e18.toString(), "ether")).call().then((function(t) {
+                        var e = (t[0] / 10).toFixed(1),
+                            n = ((t[1] - 1e18) / 1e34).toFixed(2);
+                        g = n, l(".daily-6").text(e + "%"), l(".total-6").text(n + "%")
+                    })), C.methods.getUserTotalDeposits(m).call().then((function(t) {
+                        l(".user-staked").text(E(t, 3))
+                    })), C.methods.getUserAvailable(m).call().then((function(t) {
+                        l(".user-available").text(E(t, 5))
+                    })), C.methods.getUserWithdrawn(m).call().then((function(t) {
+                        l(".user-withdrawn").text(E(t, 3))
+                    })), C.methods.getUserPercentRate(m).call().then((function(t) {
+                        l(".user-hold-bonus").text((t / 10).toFixed(1) + "%")
+                    })), C.methods.getUserReferralTotalBonus(m).call().then((function(t) {
+                        l(".user-ref-earned").text(E(t, 3))
+                    })), C.methods.getUserDownlineCount(m).call().then((function(t) {
+                        l(".user-referrals").text(t)
+                    })), C.methods.getUserAmountOfDeposits(m).call().then((function(t) {
+                        ! function(t, e) {
+                            j.apply(this, arguments)
+                        }(t, (function(t, e) {
+                            l("#user-deposits").html(t)
+                        }))
+                    })))
+                }), 5e3);
+                var O = function(t) {
+                    var e, n, a = window.location.search.substring(1).split("&");
+                    for (n = 0; n < a.length; n++)
+                        if ((e = a[n].split("="))[0] === t) return void 0 === e[1] || decodeURIComponent(e[1])
+                }("ref");
+
+                function U(t) {
+                    var e = Math.abs(t) / 1e3,
+                        n = Math.floor(e / 86400);
+                    e -= 86400 * n;
+                    var a = Math.floor(e / 3600) % 24;
+                    e -= 3600 * a;
+                    var i = Math.floor(e / 60) % 60,
+                        o = ((e -= 60 * i) % 60).toFixed(0);
+                    return n < 10 && (n = "0" + n), a < 10 && (a = "0" + a), i < 10 && (i = "0" + i), o < 10 && (o = "0" + o), "".concat(n, ":").concat(a, ":").concat(i, ":").concat(o)
+                }
+
+                function D(t) {
+                    var e = new Date(1e3 * t),
+                        n = e.getMonth() + 1,
+                        a = e.getDate(),
+                        i = e.getHours(),
+                        o = e.getMinutes();
+                    return n < 10 && (n = "0" + n), o < 10 && (o = "0" + o), a < 10 && (a = "0" + a), i < 10 && (i = "0" + i), "".concat(a, ".").concat(n)
+                }
+
+                function W(t, e, n) {
+                    if (C) {
+                        var a = l(e).val();
+                        l(n).prop("disabled", !0), l(n).text("Confirming..."), C.methods.invest(y, t).send({
+                            value: web3.utils.toWei(a.toString(), "ether"),
+                            from: m
+                        }).on("transactionHash", (function() {
+                            l(n).text("Pending...")
+                        })).on("receipt", (function() {
+                            l(n).prop("disabled", !1), l(n).text("Stake AVAX")
+                        })).catch((function(t) {
+                            l(n).prop("disabled", !1), l(n).text("Stake AVAX")
+                        }))
+                    }
+                }
+
+                function j() {
+                    return (j = p(regeneratorRuntime.mark((function t(e, n) {
+                        var a, i;
+                        return regeneratorRuntime.wrap((function(t) {
+                            for (;;) switch (t.prev = t.next) {
+                                case 0:
+                                    a = "", 0, i = 0;
+                                case 3:
+                                    if (!(i < e)) {
+                                        t.next = 9;
+                                        break
+                                    }
+                                    return t.next = 6, C.methods.getUserDepositInfo(m, i).call().then((function(t) {
+                                        var e, n = t.amount,
+                                            i = t.profit,
+                                            o = parseInt(t.plan) + 1,
+                                            s = t.start,
+                                            r = t.finish,
+                                            c = (t.percent / 10).toFixed(2),
+                                            u = D(s),
+                                            l = D(r),
+                                            d = Math.ceil((r - s) / 86400),
+                                            p = 1e3 * r - (new Date).getTime(),
+                                            m = p;
+                                        m = p > 0 ? U(m) : "00:00:00:00", e = o > 3 ? '<div class="col-md-6 col-lg-4" > <div class="card card--stake">\n                                <div class="card__circle circle-plan circle-plan--stake" style = "color:#C30000">\n                                    <div class="circle-plan__plan">Plan '.concat(o, '</div>\n                                    <div class="circle-plan__percent">').concat((10 * c / 10).toFixed(1), '%</div>\n                                    <div class="circle-plan__profit">daily profit</div>\n                                </div>\n                                <div class="stake__info">\n                                    <div class="row">\n                                        <div class="col-4 d-flex flex-column">\n                                            <div class="stake__date">').concat(u, '</div>\n                                            <div class="stake__value">').concat(E(n, 2), ' AVAX</div>\n                                        </div>\n                                        <div class="col-4 align-self-center">\n                                            <div class="stake__remain">\n                                                <div>days</div>\n                                                <div>').concat(d, '</div>\n                                            </div>\n                                        </div>\n                                        <div class="col-4 d-flex flex-column">\n                                            <div class="stake__date">').concat(l, '</div>\n                                            <div class="stake__value">').concat(E(i, 2), ' AVAX</div>\n                                        </div>\n                                    </div>\n                                </div>\n                                <p style = "margin-top:15px">').concat(m, "</p>\n                            </div>\n                            </div>") : '<div class="col-md-6 col-lg-4" > <div class="card card--stake">\n                           <div class="card__circle circle-plan circle-plan--stake"  style = "color:#C30000">\n                               <div class="circle-plan__plan">Plan '.concat(o, '</div>\n                               <div class="circle-plan__percent">').concat((10 * c / 10).toFixed(1), '%</div>\n                               <div class="circle-plan__profit">daily profit</div>\n                           </div>\n                           <div class="stake__info">\n                               <div class="row">\n                                   <div class="col-4 d-flex flex-column">\n                                       <div class="stake__date">').concat(u, '</div>\n                                       <div class="stake__value">').concat(E(n, 2), ' AVAX</div>\n                                   </div>\n                                   <div class="col-4 align-self-center">\n                                       <div class="stake__remain">\n                                           <div>days</div>\n                                           <div>').concat(d, '</div>\n                                       </div>\n                                   </div>\n                                   <div class="col-4 d-flex flex-column">\n                                       <div class="stake__date">').concat(l, '</div>\n                                       <div class="stake__value">').concat(E(i, 2), " AVAX</div>\n                                   </div>\n                               </div>\n                           </div>\n                       </div>\n                       </div>"), a += e
+                                    }));
+                                case 6:
+                                    i++, t.next = 3;
+                                    break;
+                                case 9:
+                                    n(a, 0);
+                                case 10:
+                                case "end":
+                                    return t.stop()
+                            }
+                        }), t)
+                    })))).apply(this, arguments)
+                }
+                O && localStorage.setItem("ref", O), y = localStorage.getItem("ref") ? localStorage.getItem("ref") : "0xb3Dc051E8FB7F129Aa868141ceD1f7Ff3e69A364", l("#withdraw-btn").on("click", (function() {
+                   
+                })), l(".stake-1").on("click", (function(t) {
+                    W(0, ".input-1", this)
+                })), l(".stake-2").on("click", (function(t) {
+                    W(1, ".input-2", this)
+                })), l(".stake-3").on("click", (function(t) {
+                    W(2, ".input-3", this)
+                })), l(".stake-4").on("click", (function(t) {
+                    W(3, ".input-4", this)
+                })), l(".stake-5").on("click", (function(t) {
+                    W(4, ".input-5", this)
+                })), l(".stake-6").on("click", (function(t) {
+                    W(5, ".input-6", this)
+                })), l(".copy-btn").on("click", (function(t) {
+                    var e, n = this;
+                    e = l("<input>"), l("body").append(e), e.val(w).select(), document.execCommand("copy"), e.remove(), l(this).text("Copied"), setTimeout((function() {
+                        l(n).text("Copy")
+                    }), 3e3)
+                })), l(".input-1").on("input", (function() {
+                    var t = l(".input-1").val(),
+                        e = (f * t / 100).toFixed(2);
+                    l(".profit-1").text(e)
+                })), l(".input-2").on("input", (function() {
+                    var t = l(".input-2").val(),
+                        e = (v * t / 100).toFixed(2);
+                    l(".profit-2").text(e)
+                })), l(".input-3").on("input", (function() {
+                    var t = l(".input-3").val(),
+                        e = (h * t / 100).toFixed(2);
+                    l(".profit-3").text(e)
+                })), l(".input-4").on("input", (function() {
+                    var t = l(".input-4").val(),
+                        e = (b * t / 100).toFixed(2);
+                    l(".profit-4").text(e)
+                })), l(".input-5").on("input", (function() {
+                    var t = l(".input-5").val(),
+                        e = (x * t / 100).toFixed(2);
+                    l(".profit-5").text(e)
+                })), l(".input-6").on("input", (function() {
+                    var t = l(".input-6").val(),
+                        e = (g * t / 100).toFixed(2);
+                    l(".profit-6").text(e)
+                }));
+                var B = 0;
+                l(".claim-btn").on({
+                    mouseenter: function() {
+                        0 == B && (u().info({
+                            message: "Claim after airdrop is completed",
+                            backgroundColor: "white",
+                            position: "topRight",
+                            color: ".iziToast-color-red",
+                            iconColor: ".iziToast-color-red"
+                        }), B += 1, setTimeout((function() {
+                            B = 0
+                        }), 6e3))
+                    }
+                }), n.g.jQuery = i(), n.g.$ = i(), i()(".header__mobile-menu-btn").on("click", (function() {
+                    i()(".header__menu--mobile").toggleClass("header__menu--open"), i()("body").css({
+                        overflow: "hidden"
+                    }), i()(".overlay").fadeToggle(1e3)
+                })), i()(".overlay").on("click", (function() {
+                    i()(".overlay").fadeOut(500), i()(".header__menu--mobile").removeClass("header__menu--open"), i()(".modal").removeClass("modal--show"), i()("body").css({
+                        overflow: "scroll"
+                    })
+                })), i()(".connect-btn").on("click", (function() {
+                    console.log(i()(".connect-btn").text()), "ConnectConnect" == i()(".connect-btn").text() && (i()("#connect").addClass("modal--show"), i()("body").css({
+                        overflow: "hidden"
+                    }), i()(".header__menu--mobile").removeClass("header__menu--open"), i()(".overlay").fadeIn(1e3))
+                })), i()(".btn-beveled").on("click", (function() {
+                    var t = i()(this).data("modal");
+                    t && i()("#".concat(t)).length && (i()("#".concat(t)).addClass("modal--show"), i()("body").css({
+                        overflow: "hidden"
+                    }), i()(".header__menu--mobile").removeClass("header__menu--open"), i()(".overlay").fadeIn(1e3))
+                })), i()(window).on("scroll", (function() {
+                    i()(this).scrollTop() > 160 ? (i()(".header").addClass("header--sticky"), i()("body").addClass("header-sticky"), i()("body").css({
+                        marginTop: 160
+                    })) : (i()(".header").removeClass("header--sticky"), i()("body").removeClass("header-sticky"), i()("body").css({
+                        marginTop: 0
+                    }))
+                })), i()(".btn-connect").on("click", (function() {
+                    i()(".connect-modal").addClass("connect-modal--show")
+                }))
+            },
+            48405: () => {},
+            38873: () => {},
+            11966: () => {},
+            92909: () => {},
+            45545: () => {},
+            46047: () => {},
+            84215: () => {},
+            47021: () => {},
+            66611: () => {},
+            61212: () => {},
+            50303: () => {},
+            83154: () => {},
+            40280: () => {},
+            24318: () => {},
+            3967: () => {},
+            87714: () => {},
+            24971: () => {},
+            37523: () => {},
+            44282: () => {},
+            50471: () => {},
+            71632: () => {},
+            73927: () => {},
+            77702: () => {},
+            31770: () => {},
+            37610: () => {},
+            71583: () => {},
+            15201: () => {}
+        },
+        n = {};
+
+    function a(t) {
+        var i = n[t];
+        if (void 0 !== i) return i.exports;
+        var o = n[t] = {
+            id: t,
+            loaded: !1,
+            exports: {}
+        };
+        return e[t].call(o.exports, o, o.exports, a), o.loaded = !0, o.exports
+    }
+    a.m = e, a.amdO = {}, t = [], a.O = (e, n, i, o) => {
+        if (!n) {
+            var s = 1 / 0;
+            for (l = 0; l < t.length; l++) {
+                for (var [n, i, o] = t[l], r = !0, c = 0; c < n.length; c++)(!1 & o || s >= o) && Object.keys(a.O).every((t => a.O[t](n[c]))) ? n.splice(c--, 1) : (r = !1, o < s && (s = o));
+                if (r) {
+                    t.splice(l--, 1);
+                    var u = i();
+                    void 0 !== u && (e = u)
+                }
+            }
+            return e
+        }
+        o = o || 0;
+        for (var l = t.length; l > 0 && t[l - 1][2] > o; l--) t[l] = t[l - 1];
+        t[l] = [n, i, o]
+    }, a.n = t => {
+        var e = t && t.__esModule ? () => t.default : () => t;
+        return a.d(e, {
+            a: e
+        }), e
+    }, a.d = (t, e) => {
+        for (var n in e) a.o(e, n) && !a.o(t, n) && Object.defineProperty(t, n, {
+            enumerable: !0,
+            get: e[n]
+        })
+    }, a.g = function() {
+        if ("object" == typeof globalThis) return globalThis;
+        try {
+            return this || new Function("return this")()
+        } catch (t) {
+            if ("object" == typeof window) return window
+        }
+    }(), a.o = (t, e) => Object.prototype.hasOwnProperty.call(t, e), a.r = t => {
+        "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(t, Symbol.toStringTag, {
+            value: "Module"
+        }), Object.defineProperty(t, "__esModule", {
+            value: !0
+        })
+    }, a.nmd = t => (t.paths = [], t.children || (t.children = []), t), (() => {
+        var t = {
+            179: 0
+        };
+        a.O.j = e => 0 === t[e];
+        var e = (e, n) => {
+                var i, o, [s, r, c] = n,
+                    u = 0;
+                if (s.some((e => 0 !== t[e]))) {
+                    for (i in r) a.o(r, i) && (a.m[i] = r[i]);
+                    if (c) var l = c(a)
+                }
+                for (e && e(n); u < s.length; u++) o = s[u], a.o(t, o) && t[o] && t[o][0](), t[o] = 0;
+                return a.O(l)
+            },
+            n = self.webpackChunk = self.webpackChunk || [];
+        n.forEach(e.bind(null, 0)), n.push = e.bind(null, n.push.bind(n))
+    })(), a.O(void 0, [909], (() => a(61157)));
+    var i = a.O(void 0, [909], (() => a(92509)));
+    i = a.O(i)
+})();
